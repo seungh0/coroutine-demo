@@ -4,7 +4,7 @@ import kotlinx.coroutines.*
 import org.junit.jupiter.api.Test
 import kotlin.system.measureTimeMillis
 
-internal class SequentialByDefaultTest {
+internal class SuspendFunctionTest {
 
     @Test
     fun `Sequential by default`() = runBlocking {
