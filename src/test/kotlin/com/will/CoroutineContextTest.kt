@@ -37,6 +37,17 @@ internal class CoroutineContextTest {
         clock()
     }
 
+    @Test
+    fun `withContext Test`() = runBlocking {
+        withContext(context = Dispatchers.IO) {
+            launch {
+                delay(timeMillis = 1000L)
+                println("어렵자나")
+            }
+            println("Dispatcher.. Context....")
+        }
+    }
+
     private suspend fun clock() = coroutineScope {
         launch {
             delay(timeMillis = 1000L)
